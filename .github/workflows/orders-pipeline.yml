@@ -24,7 +24,6 @@ jobs:
     with:
       sonar_project_key: Proyecto-Devops-2024_orders-service
 
-      
   deploy-dev:
     needs: sonarqube-scan
     runs-on: ubuntu-latest
