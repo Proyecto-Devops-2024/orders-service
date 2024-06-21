@@ -12,11 +12,11 @@ on:
 jobs:
   build-and-test:
     name: Build and Test
-    uses: Proyecto-Devops-2024/devops-repo/pipelines-jobs/maven-build-and-test.yml@main
+    uses: Proyecto-Devops-2024/devops-repo/.github/workflows/maven-build-and-test.yml@main
 
   sonarqube-scan:
     needs: build-and-test
-    uses: Proyecto-Devops-2024/devops-repo/pipelines-jobs/sonarqube-scan-java.yml@main
+    uses: Proyecto-Devops-2024/devops-repo/.github/workflows/sonarqube-scan-java.yml@main
     with:
       sonar_project_key: Proyecto-Devops-2024_orders-service
 
