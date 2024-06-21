@@ -15,7 +15,6 @@ permissions: write-all
 
 jobs:
   build-and-test:
-    name: Build and Test
     uses: Proyecto-Devops-2024/devops-repo/.github/workflows/maven-build-and-test.yml@main
     
 
@@ -23,7 +22,6 @@ jobs:
     needs: build-and-test
     uses: Proyecto-Devops-2024/devops-repo/.github/workflows/sonarqube-scan-java.yml@main
     with:
-      
       sonar_project_key: Proyecto-Devops-2024_orders-service
 
   deploy-dev:
