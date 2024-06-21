@@ -9,6 +9,10 @@ on:
     branches:
       - main
       - feature/*
+  
+  workflow_dispatch:
+permissions: write-all
+
 jobs:
   build-and-test:
     name: Build and Test
