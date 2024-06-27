@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-      - feature/*
+
   pull_request:
     branches:
       - main
-      - feature/*
+
   workflow_dispatch:
 
 permissions: write-all
@@ -16,4 +16,6 @@ permissions: write-all
 jobs:
   main-workflow:
     uses: Proyecto-Devops-2024/devops-repo/.github/workflows/main.yml@main
+    with:
+      sonar_project_key: Proyecto-Devops-2024_orders-service
     secrets: inherit
