@@ -20,6 +20,6 @@ jobs:
     uses: Proyecto-Devops-2024/devops-repo/.github/workflows/main-workflow.yml@main
     with:
       sonar_project_key: Proyecto-Devops-2024_orders-service
-      sonar_token: "5ac80e81a4d7599d719120d909bd4170a65fd822"
+      sonar_token: "123"
     secrets: inherit
 
