@@ -15,19 +15,10 @@ permissions: write-all
 
 
 jobs:
-  sonarqube-scan:
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: Check if SONAR_TOKEN is present
-        run: |
-          if [ -z "${{ secrets.SONAR_TOKEN }}" ]; then
-            echo "SONAR_TOKEN is not set"
-          else
-            echo "SONAR_TOKEN is set"
-          fi
+  
   main-workflow:
     uses: Proyecto-Devops-2024/devops-repo/.github/workflows/main-workflow.yml@main
     with:
       sonar_project_key: Proyecto-Devops-2024_orders-service
+      sonar_token: "${{ secrets.SONAR_TOKEN }}"
     secrets: inherit
